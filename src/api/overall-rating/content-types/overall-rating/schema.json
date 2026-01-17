@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "overall_ratings",
+  "info": {
+    "singularName": "overall-rating",
+    "pluralName": "overall-ratings",
+    "displayName": "Overall Rating"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "type": "decimal",
+      "required": true,
+      "unique": false,
+      "min": 0,
+      "max": 5
+    }
+  }
+}

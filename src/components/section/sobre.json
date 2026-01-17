@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_sobres",
+  "info": {
+    "displayName": "Sobre",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "introductionText": {
+      "type": "text"
+    },
+    "profile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
