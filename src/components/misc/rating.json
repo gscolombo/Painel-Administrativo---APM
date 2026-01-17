@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_misc_ratings",
+  "info": {
+    "displayName": "Rating",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

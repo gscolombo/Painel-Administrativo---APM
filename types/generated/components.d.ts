@@ -1,5 +1,62 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface MiscGoogleReviews extends Struct.ComponentSchema {
+  collectionName: 'components_misc_google_reviews';
+  info: {
+    displayName: 'Google Reviews';
+  };
+  attributes: {
+    averageRating: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
+    reviews: Schema.Attribute.Component<'misc.review', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+        },
+        number
+      >;
+  };
+}
+
+export interface MiscRating extends Struct.ComponentSchema {
+  collectionName: 'components_misc_ratings';
+  info: {
+    displayName: 'Rating';
+    icon: 'star';
+  };
+  attributes: {};
+}
+
+export interface MiscReview extends Struct.ComponentSchema {
+  collectionName: 'components_misc_reviews';
+  info: {
+    displayName: 'Review';
+    icon: 'star';
+  };
+  attributes: {
+    author: Schema.Attribute.String & Schema.Attribute.Required;
+    publishTime: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    rating: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
+    reviewText: Schema.Attribute.Text;
+  };
+}
+
 export interface SectionSobre extends Struct.ComponentSchema {
   collectionName: 'components_section_sobres';
   info: {
@@ -77,6 +134,9 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'misc.google-reviews': MiscGoogleReviews;
+      'misc.rating': MiscRating;
+      'misc.review': MiscReview;
       'section.sobre': SectionSobre;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

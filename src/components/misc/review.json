@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_misc_reviews",
+  "info": {
+    "displayName": "Review",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "rating": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "max": 5
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "reviewText": {
+      "type": "text"
+    },
+    "publishTime": {
+      "type": "datetime",
+      "required": true
+    }
+  },
+  "config": {}
+}

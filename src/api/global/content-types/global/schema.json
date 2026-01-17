@@ -47,6 +47,11 @@
       "type": "component",
       "component": "section.sobre",
       "repeatable": false
+    },
+    "googleReviews": {
+      "type": "component",
+      "component": "misc.google-reviews",
+      "repeatable": false
     }
   }
 }

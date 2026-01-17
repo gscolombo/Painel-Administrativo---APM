@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_misc_google_reviews",
+  "info": {
+    "displayName": "Google Reviews"
+  },
+  "options": {},
+  "attributes": {
+    "averageRating": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "max": 5
+    },
+    "reviews": {
+      "type": "component",
+      "component": "misc.review",
+      "repeatable": true,
+      "required": true,
+      "max": 5
+    }
+  },
+  "config": {}
+}
