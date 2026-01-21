@@ -3,10 +3,7 @@ export default {
         {
             method: 'POST',
             path: '/contact/submit',
-            handler: 'submission.submit',
-            config: {
-                auth: false,
-            }
+            handler: 'submission.submit'
         }
     ]
 }

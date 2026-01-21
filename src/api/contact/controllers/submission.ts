@@ -62,7 +62,7 @@ export default {
       
     } catch (err) {
       strapi.log.error('Error during contact submission processing:', err);
-      ctx.internalServerError('Um erro ocorreu durante o envio da mensagem.');
+      return ctx.internalServerError('Um erro ocorreu durante o envio da mensagem.', err);
     }
   }
 };
