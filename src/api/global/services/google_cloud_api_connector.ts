@@ -28,9 +28,6 @@ export default async function updateGoogleMapsReviews() {
                 publishTime: review.publishTime,
             })
         }
-
-        console.log(`Average rating: ${rating}`);
-        console.log(`Reviews: ${_reviews}`);
         
         await strapi.documents('api::global.global').update({
             documentId: "g49ke7ba6n12dyxpytnuakan",
