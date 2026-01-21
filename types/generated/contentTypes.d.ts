@@ -588,6 +588,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   attributes: {
     about: Schema.Attribute.Component<'section.sobre', false>;
     actingAreas: Schema.Attribute.Component<'section.areas-de-atuacao', true>;
+    contact: Schema.Attribute.Component<'section.contato', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

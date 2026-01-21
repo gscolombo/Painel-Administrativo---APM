@@ -57,6 +57,11 @@
       "type": "component",
       "component": "section.areas-de-atuacao",
       "repeatable": true
+    },
+    "contact": {
+      "type": "component",
+      "component": "section.contato",
+      "repeatable": false
     }
   }
 }

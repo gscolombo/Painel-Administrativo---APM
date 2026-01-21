@@ -72,6 +72,19 @@ export interface SectionAreasDeAtuacao extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionContato extends Struct.ComponentSchema {
+  collectionName: 'components_section_contatoes';
+  info: {
+    displayName: 'Contato';
+    icon: 'paperPlane';
+  };
+  attributes: {
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    phoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionSobre extends Struct.ComponentSchema {
   collectionName: 'components_section_sobres';
   info: {
@@ -153,6 +166,7 @@ declare module '@strapi/strapi' {
       'misc.rating': MiscRating;
       'misc.review': MiscReview;
       'section.areas-de-atuacao': SectionAreasDeAtuacao;
+      'section.contato': SectionContato;
       'section.sobre': SectionSobre;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
