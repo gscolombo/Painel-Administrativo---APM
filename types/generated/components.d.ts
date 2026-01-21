@@ -57,6 +57,21 @@ export interface MiscReview extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionAreasDeAtuacao extends Struct.ComponentSchema {
+  collectionName: 'components_section_areas_de_atuacaos';
+  info: {
+    displayName: '\u00C1reas de Atua\u00E7\u00E3o';
+    icon: 'crown';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+  };
+}
+
 export interface SectionSobre extends Struct.ComponentSchema {
   collectionName: 'components_section_sobres';
   info: {
@@ -137,6 +152,7 @@ declare module '@strapi/strapi' {
       'misc.google-reviews': MiscGoogleReviews;
       'misc.rating': MiscRating;
       'misc.review': MiscReview;
+      'section.areas-de-atuacao': SectionAreasDeAtuacao;
       'section.sobre': SectionSobre;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

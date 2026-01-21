@@ -52,6 +52,11 @@
       "type": "component",
       "component": "misc.google-reviews",
       "repeatable": false
+    },
+    "actingAreas": {
+      "type": "component",
+      "component": "section.areas-de-atuacao",
+      "repeatable": true
     }
   }
 }
