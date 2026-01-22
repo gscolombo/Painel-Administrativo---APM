@@ -6,5 +6,10 @@ export default ({ env }) => ({
   },
   cron: {
     enabled: true
-  }
+  },
+  http: {
+    serverOptions: {
+      timeout: 600000, // 10 seconds
+    },
+  },
 });
