@@ -9,7 +9,7 @@ export default ({ env }) => ({
   },
   http: {
     serverOptions: {
-      timeout: 600000, // 10 seconds
+      timeout: 600000, // 10 minutes
     },
   },
 });
